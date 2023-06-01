@@ -51,14 +51,14 @@ export default function Home() {
             </ul>
           </nav>
           <div className="text-center p-5">
-            <h2 className="text-5xl py-2 text-teal-700 font-medium font-burtons leading-3 md:text-6xl">
+            <h2 className="text-5xl py-2 text-teal-700 font-medium font-burtons leading-3 md:text-4xl">
               Vidhan Solanki
             </h2>
             <h3 className="text-xl py-5  font-burtons md:text-3xl dark: text-cyan-800">
               Programmer & Developer
             </h3>
             {/* 🗒️📂 ⚙️🔗*/}
-            <p className="text-md py-3 leading-7 text-gray-700 md:text-xl max-w-lg mx-auto dark:text-white md:max-w-lg">
+            <p className="text-md py-3 leading-7 text-gray-700 md:text-xl max-w-lg mx-auto dark:text-white md:max-w-none">
               👋 Bonjour! I am a passionate Computer Science Student immersed in
               the captivating realm of Web Development 🌐. With boundless
               enthusiasm, I create mesmerizing 📱applications, elegant ⚜️sites,
