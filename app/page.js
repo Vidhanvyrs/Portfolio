@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import dotlasher from "public/avatar.jpeg";
+import dotlasher from "public/dotlasher2.jpg";
 import edu from "public/edu.png";
 import code from "public/code2.png";
 import consult from "public/consulting.png";
