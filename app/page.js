@@ -22,6 +22,22 @@ import {
 
 export default function Home() {
   const [darkMode, setdarkMode] = useState(false);
+   const handleResumeClick = () => {
+    // Create a temporary link element
+    const link = document.createElement("a");
+    link.href = "public/vidhanresume.pdf";
+    link.download = "resume.pdf";
+
+    // Append the link to the document body
+    document.body.appendChild(link);
+
+    // Trigger a click event on the link
+    link.click();
+
+    // Remove the link from the document body
+    document.body.removeChild(link);
+  };
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <main className="bg-white px-10 md:px-20 dark:bg-gray-900 ">
@@ -40,12 +56,12 @@ export default function Home() {
                 />
               </li>
               <li>
-                <a
+                <button
+                  onClick={handleResumeClick}
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-7 hover:animate-bounce"
-                  href="#"
                 >
                   RESUME
-                </a>
+                </button>
               </li>
             </ul>
           </nav>
