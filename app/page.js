@@ -58,7 +58,7 @@ export default function Home() {
               Programmer & Developer
             </h3>
             {/* 🗒️📂 ⚙️🔗*/}
-            <p className="text-md py-3 leading-7 text-gray-700 md:text-xl max-w-lg mx-auto dark:text-white md:max-w-none">
+            <p className="text-md py-3 leading-7 text-gray-700 md:text-xl max-w-lg mx-auto dark:text-white md:max-w-lg">
               👋 Bonjour! I am a passionate Computer Science Student immersed in
               the captivating realm of Web Development 🌐. With boundless
               enthusiasm, I create mesmerizing 📱applications, elegant ⚜️sites,
