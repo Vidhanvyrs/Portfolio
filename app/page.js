@@ -51,7 +51,7 @@ export default function Home() {
             </ul>
           </nav>
           <div className="text-center p-5">
-            <h2 className="text-5xl py-2 text-teal-700 font-medium font-burtons leading-3 md:text-4xl">
+            <h2 className="text-5xl py-2 text-teal-700 font-medium font-burtons leading-3 md:text-4xl md:max-w-lg">
               Vidhan Solanki
             </h2>
             <h3 className="text-xl py-5  font-burtons md:text-3xl dark: text-cyan-800">
