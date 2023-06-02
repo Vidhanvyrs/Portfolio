@@ -278,7 +278,7 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <a href="https://vidhanvyrs.github.io/PackageMan/" target="_blank">
+              <a href="https://package-man.vercel.app/" target="_blank">
                 <Image
                   src={web5}
                   alt="web5"
@@ -289,7 +289,7 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <a href="https://vidhanvyrs.github.io/MonsterMarket/" target="_blank">
+              <a href="https://monster-market.vercel.app/" target="_blank">
                 <Image
                   src={web6}
                   alt="web6"
