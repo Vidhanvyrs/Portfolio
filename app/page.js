@@ -229,7 +229,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
             <div className="basis-1/3 flex-1 group relative">
-              <a href="https://mealxotic-me8k.vercel.app/">
+              <a href="https://mealxotic-me8k.vercel.app/" target="_blank">
                 <Image
                   src={web1}
                   alt="web1"
@@ -241,7 +241,7 @@ export default function Home() {
             </div>
 
             <div className="basis-1/3 flex-1 ">
-              <a href="#">
+              <a href="#" >
                 {/* <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-75 transition-opacity duration-300 text-transparent hover:text-white">
                   WEATHER UPDATE
                 </div> */}
@@ -255,7 +255,7 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <a href="https://expense-tracker-pi-gray.vercel.app/">
+              <a href="https://expense-tracker-pi-gray.vercel.app/" target="_blank">
                 <Image
                   src={web3}
                   alt="web3"
@@ -278,7 +278,7 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <a href="https://vidhanvyrs.github.io/PackageMan/">
+              <a href="https://vidhanvyrs.github.io/PackageMan/" target="_blank">
                 <Image
                   src={web5}
                   alt="web5"
@@ -289,7 +289,7 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <a href="https://vidhanvyrs.github.io/MonsterMarket/">
+              <a href="https://vidhanvyrs.github.io/MonsterMarket/" target="_blank">
                 <Image
                   src={web6}
                   alt="web6"
@@ -300,7 +300,7 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <a href="https://old-netflix.vercel.app/">
+              <a href="https://old-netflix.vercel.app/" target="_blank">
                 <Image
                   src={web7}
                   alt="web7"
@@ -311,7 +311,7 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <a href="https://gym-landing-page-inky.vercel.app/">
+              <a href="https://gym-landing-page-inky.vercel.app/" target="_blank">
                 <Image
                   src={web8}
                   alt="web8"
