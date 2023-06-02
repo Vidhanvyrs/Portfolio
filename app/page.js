@@ -300,7 +300,7 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <a href="https://vidhanvyrs.github.io/OldNetflix/">
+              <a href="https://old-netflix.vercel.app/">
                 <Image
                   src={web7}
                   alt="web7"
@@ -311,7 +311,7 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <a href="https://vidhanvyrs.github.io/GymLandingPage/">
+              <a href="https://gym-landing-page-inky.vercel.app/">
                 <Image
                   src={web8}
                   alt="web8"
