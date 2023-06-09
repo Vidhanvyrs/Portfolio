@@ -24,7 +24,7 @@ export default function Home() {
   const [darkMode, setdarkMode] = useState(false);
   return (
     <div className={darkMode ? "dark" : ""}>
-      <main className="bg-white px-10 md:px-20 dark:bg-gray-900 ">
+      <main className="bg-gray-50  px-10 md:px-20 dark:bg-gray-900 ">
         <section className="min-h-screen">
           <nav className="py-10 mb-10 flex justify-between">
             <a className="cursor-pointer text-xl font-burtons">
