@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import dotlasher from "public/dotlasher.jpg";
+import dotlasher1 from "public/dotlasher.jpg";
 import edu from "public/edu.png";
 import code from "public/code2.png";
 import consult from "public/consulting.png";
@@ -101,7 +101,7 @@ export default function Home() {
             </div>
             <div className="py-6">
               <Image
-                src={dotlasher}
+                src={dotlasher1}
                 alt="dotlasher"
                 className="mx-auto  rounded-full shadow-lg w-60 h-60 object-cover m-5 overflow-hidden md:w-80 md:h-80 dark:shadow-lg"
               />
