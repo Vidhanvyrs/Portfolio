@@ -28,7 +28,7 @@ export default function Home() {
         <section className="min-h-screen">
           <nav className="py-10 mb-10 flex justify-between ">
             <a className="cursor-pointer text-xl font-burtons">
-              <h1 className="dark:text-white  ">DotLasher@Vidhan</h1>
+              <h1 className="dark:text-white  ">DotLasher</h1>
             </a>
             <ul className="flex items-center dark:text-white">
               <li className="rounded-sm">
