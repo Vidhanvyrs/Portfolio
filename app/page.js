@@ -1,4 +1,4 @@
-"use client";
+
 import { useState } from "react";
 import Image from "next/image";
 import dotlasher from "public/dotlasher3.jpg";
