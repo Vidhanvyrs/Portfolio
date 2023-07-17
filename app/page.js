@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import dotlasher1 from "public/dotlasher2.jpg";
+import dotlasher from "public/dotlasher3.jpg";
 import edu from "public/edu.png";
 import code from "public/code2.png";
 import consult from "public/consulting.png";
@@ -13,7 +13,7 @@ import web5 from "public/ph6.png";
 import web6 from "public/ph7.png";
 import web7 from "public/ph8.png";
 import web8 from "public/ph9.png";
-import { BsFillMoonStarsFill } from "react-icons/bs";
+import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
@@ -23,15 +23,15 @@ import {
 export default function Home() {
   const [darkMode, setdarkMode] = useState(false);
   return (
-    <div className={darkMode ? "dark" : ""}>
-      <main className="bg-gray-50  px-10 md:px-20 dark:bg-gray-900 ">
+    <div className={darkMode ? "" : "dark"}>
+      <main className="bg-gray-50 px-10 md:px-20 transition-colors duration-500 ease-in-out dark:bg-gray-900 dark:transition-colors dark:duration-500 dark:ease-in-out">
         <section className="min-h-screen">
-          <nav className="py-10 mb-10 flex justify-between">
+          <nav className="py-10 mb-10 flex justify-between ">
             <a className="cursor-pointer text-xl font-burtons">
-              <h1 className="dark:text-white ">DotLasher</h1>
+              <h1 className="dark:text-white  ">DotLasher@Vidhan</h1>
             </a>
             <ul className="flex items-center dark:text-white">
-              <li>
+              <li className="rounded-sm">
                 <BsFillMoonStarsFill
                   onClick={() => {
                     setdarkMode(!darkMode);
@@ -39,11 +39,12 @@ export default function Home() {
                   className="cursor-pointer text-2xl"
                 />
               </li>
+
               <li>
-              <a
+                <a
                   href="https://drive.google.com/file/d/1LNRGeD4cI2X5Z_fPPZyh25GmM_5YOMdQ/view?usp=drive_link"
                   target="_blank"
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-7 hover:animate-bounce"
+                  className="ease-in-out duration-300 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-7 hover:animate-bounce"
                 >
                   RESUME
                 </a>
@@ -51,14 +52,22 @@ export default function Home() {
             </ul>
           </nav>
           <div className="text-center p-5">
+            <div className="py-1">
+              <Image
+                src={dotlasher}
+                alt="dotlasher"
+                className="mx-auto  rounded-full shadow-lg w-60 h-60 object-cover m-5 overflow-hidden md:w-80 md:h-80 dark:shadow-lg"
+              />
+            </div>
             <h2 className="text-4xl py-2 text-teal-700 font-medium font-burtons leading-tight md:text-6xl">
               Vidhan Solanki
             </h2>
+
             <h3 className="text-xl py-5  font-burtons md:text-3xl dark: text-cyan-800">
               Programmer & Developer
             </h3>
             {/* 🗒️📂 ⚙️🔗*/}
-            <p className="text-md py-3 leading-7 text-gray-700 md:text-xl max-w-lg mx-auto dark:text-white md:max-w-none">
+            <p className="text-md py-3 leading-7 text-gray-700 md:text-xl max-w-lg mx-auto dark:text-white md:max-w-4xl">
               👋 Bonjour! I am a passionate Computer Science Student immersed in
               the captivating realm of Web Development 🌐. With boundless
               enthusiasm, I create mesmerizing 📱applications, elegant ⚜️sites,
@@ -69,21 +78,6 @@ export default function Home() {
               growth and improvement, honing my Frontend skills. However, I a m
               eager to broaden my horizons and gain more exposure 🚀 As my goal
               extends in making myself a quality Full Stack developer😉
-              {/* 👋 Bonjour. I am a Computer Science Student who is passionately
-              driven and tirelessly dedicated to the captivating realm of Web
-              Development🌐 With boundless enthusiasm, I immerse myself in
-              crafting mesmerizing 📱applications, elegant ⚜️sites, and
-              captivating 📝designs. As a lifelong 🙇‍♂️learner, I wholeheartedly
-              embrace the journey of continuous growth and improvement,
-              exclusively focusing on honing my Frontend skills. However, my
-              ambitions extend beyond the boundaries of Frontend, as I eagerly
-              look forward to broadening my horizons and gaining more exposure.
-              🚀 */}
-              {/* 👋 Bonjour. I am an Engineering Student who is passionate and
-              hardworking in the field of Web[📱applications,⚜️sites,📝design],
-              A life-long 🙇‍♂️learner, exclusively working on my Fontend skills
-              although I am looking forward to get more exposure so that i can
-              become a quality Full Stack developer */}
             </p>
             <div className="text-4xl flex justify-center gap-16 py-10 text-gray-600 md:gap-40 dark:text-gray-400">
               <a href="https://twitter.com/DotLasher" target="_blank">
@@ -99,16 +93,9 @@ export default function Home() {
                 <AiFillGithub className="hover:text-black dark:hover:text-white  cursor-pointer" />
               </a>
             </div>
-            <div className="py-6">
-              <Image
-                src={dotlasher1}
-                alt="dotlasher"
-                className="mx-auto  rounded-full shadow-lg w-60 h-60 object-cover m-5 overflow-hidden md:w-80 md:h-80 dark:shadow-lg"
-              />
-            </div>
           </div>
         </section>
-        <section className="text-center py-8">
+        <section className="text-center py-10">
           <div>
             <h3 className="text-3xl  dark:text-cyan-800 font-burtons">
               Skills & Services
@@ -229,7 +216,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
             <div className="basis-1/3 flex-1 group relative">
-              <a href="https://mealxotic-me8k.vercel.app/" target="_blank">
+              <a href="https://mealxotic-me8k.vercel.app/">
                 <Image
                   src={web1}
                   alt="web1"
@@ -241,7 +228,7 @@ export default function Home() {
             </div>
 
             <div className="basis-1/3 flex-1 ">
-              <a href="#" >
+              <a href="#">
                 {/* <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-75 transition-opacity duration-300 text-transparent hover:text-white">
                   WEATHER UPDATE
                 </div> */}
@@ -255,7 +242,7 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <a href="https://expense-tracker-pi-gray.vercel.app/" target="_blank">
+              <a href="https://expense-tracker-pi-gray.vercel.app/">
                 <Image
                   src={web3}
                   alt="web3"
@@ -278,7 +265,7 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <a href="https://package-man.vercel.app/" target="_blank">
+              <a href="https://vidhanvyrs.github.io/PackageMan/">
                 <Image
                   src={web5}
                   alt="web5"
@@ -289,7 +276,7 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <a href="https://monster-market.vercel.app/" target="_blank">
+              <a href="https://vidhanvyrs.github.io/MonsterMarket/">
                 <Image
                   src={web6}
                   alt="web6"
@@ -300,7 +287,7 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <a href="https://old-netflix.vercel.app/" target="_blank">
+              <a href="https://vidhanvyrs.github.io/OldNetflix/">
                 <Image
                   src={web7}
                   alt="web7"
@@ -311,7 +298,7 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <a href="https://gym-landing-page-inky.vercel.app/" target="_blank">
+              <a href="https://vidhanvyrs.github.io/GymLandingPage/">
                 <Image
                   src={web8}
                   alt="web8"
