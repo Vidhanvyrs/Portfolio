@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import dotlasher from "public/dotlasher3.jpg";
 import edu from "public/edu.png";
@@ -13,7 +14,16 @@ import web5 from "public/ph6.png";
 import web6 from "public/ph7.png";
 import web7 from "public/ph8.png";
 import web8 from "public/ph9.png";
-import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
+import {
+  BsFillMoonStarsFill,
+  BsFillSunFill,
+  FaReact,
+  AiFillHtml5,
+  IoLogoCss3,
+  BiLogoJavascript,
+  BiLogoTailwindCss,
+  FaJava,
+} from "react-icons/bs";
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
@@ -22,29 +32,64 @@ import {
 
 export default function Home() {
   const [darkMode, setdarkMode] = useState(false);
+  const [myicon, seticon] = useState(false);
+  const modehandler = () => {
+    setdarkMode(!darkMode);
+    seticon(!myicon);
+  };
+
+  const icon = myicon ? (
+    <BsFillMoonStarsFill className="cursor-pointer text-2xl transition-transform duration-500" />
+  ) : (
+    <BsFillSunFill className="cursor-pointer text-2xl transition-transform duration-500 animate-spin" />
+  );
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_kdmsn5q",
+        "template_467g7bi",
+        form.current,
+        "YNF9oviOIkAKFnOzr"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <div className={darkMode ? "" : "dark"}>
       <main className="bg-gray-50 px-10 md:px-20 transition-colors duration-500 ease-in-out dark:bg-gray-900 dark:transition-colors dark:duration-500 dark:ease-in-out">
         <section className="min-h-screen">
           <nav className="py-10 mb-10 flex justify-between ">
             <a className="cursor-pointer text-xl font-burtons">
-              <h1 className="dark:text-white  ">DotLasher</h1>
+              <h1 className="dark:text-white">DotLasher</h1>
             </a>
             <ul className="flex items-center dark:text-white">
-              <li className="rounded-sm">
-                <BsFillMoonStarsFill
+              <li className="rounded-sm " onClick={modehandler}>
+                {/* <BsFillMoonStarsFill
                   onClick={() => {
                     setdarkMode(!darkMode);
                   }}
                   className="cursor-pointer text-2xl"
-                />
+                /> */}
+                {icon}
               </li>
 
               <li>
                 <a
                   href="https://drive.google.com/file/d/1LNRGeD4cI2X5Z_fPPZyh25GmM_5YOMdQ/view?usp=drive_link"
                   target="_blank"
-                  className="ease-in-out duration-300 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-7 hover:animate-bounce"
+                  className="ease-in-out duration-300 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-7"
                 >
                   RESUME
                 </a>
@@ -310,6 +355,41 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <footer className="text-center py-8  bg-stone-100 shadow-lg rounded-xl  dark:bg-gray-900 dark:text-gray-200">
+          <div>
+            <h3 className="text-3xl py-10 dark:text-cyan-800 font-burtons">
+              Connect with me and Share your thoughts 💭
+            </h3>
+            <form className="mx-auto max-w-md">
+              {/* <label className="block">Name</label> */}
+              <input
+                type="text"
+                name="user_name"
+                placeholder="📛  Your Name"
+                className="my-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700 font-serif outline-none p-3 w-96"
+              />
+              {/* <label className="block">Email</label> */}
+              <input
+                type="email"
+                name="user_email"
+                placeholder="📧  Your E-mail"
+                className="my-2 bg-gray-200 border border-gray-300 rounded-lg  text-gray-700 font-serif outline-none p-3 w-96"
+              />
+              {/* <label className="block">Message</label> */}
+              <textarea
+                name="message"
+                placeholder="✍️  Write Me Here "
+                className="my-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700 font-serif outline-none p-3 w-96 h-48"
+              ></textarea>
+              <input
+                type="submit"
+                value="Send"
+                className="my-2 text-lg rounded-lg bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-burtons outline-none p-3 w-52 cursor-pointer"
+              />
+            </form>
+          </div>
+        </footer>
       </main>
     </div>
   );
