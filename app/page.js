@@ -16,13 +16,7 @@ import web7 from "public/ph8.png";
 import web8 from "public/ph9.png";
 import {
   BsFillMoonStarsFill,
-  BsFillSunFill,
-  FaReact,
-  AiFillHtml5,
-  IoLogoCss3,
-  BiLogoJavascript,
-  BiLogoTailwindCss,
-  FaJava,
+  BsFillSunFill
 } from "react-icons/bs";
 import {
   AiFillTwitterCircle,
