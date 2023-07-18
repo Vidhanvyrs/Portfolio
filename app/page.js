@@ -350,36 +350,33 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="text-center py-8  bg-stone-100 shadow-lg rounded-xl  dark:bg-gray-900 dark:text-gray-200">
+     <footer className="text-center py-8 bg-stone-100 shadow-lg rounded-xl dark:bg-gray-900 dark:text-gray-200">
           <div>
             <h3 className="text-3xl py-10 dark:text-cyan-800 font-burtons">
               Connect with me and Share your thoughts 💭
             </h3>
             <form ref={form} onSubmit={sendEmail} className="mx-auto max-w-md">
-              {/* <label className="block">Name</label> */}
               <input
                 type="text"
                 name="user_name"
                 placeholder="📛  Your Name"
-                className="my-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700 font-serif outline-none p-3 w-96"
+                className="my-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700 font-serif outline-none p-3 w-full md:w-96"
               />
-              {/* <label className="block">Email</label> */}
               <input
                 type="email"
                 name="user_email"
                 placeholder="📧  Your E-mail"
-                className="my-2 bg-gray-200 border border-gray-300 rounded-lg  text-gray-700 font-serif outline-none p-3 w-96"
+                className="my-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700 font-serif outline-none p-3 w-full md:w-96"
               />
-              {/* <label className="block">Message</label> */}
               <textarea
                 name="message"
                 placeholder="✍️  Write Me Here "
-                className="my-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700 font-serif outline-none p-3 w-96 h-48"
+                className="my-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700 font-serif outline-none p-3 w-full md:w-96 h-48"
               ></textarea>
               <input
                 type="submit"
                 value="Send"
-                className="my-2 text-lg rounded-lg bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-burtons outline-none p-3 w-52 cursor-pointer"
+                className="my-2 text-lg rounded-lg bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-burtons outline-none p-3 w-full md:w-52 cursor-pointer"
               />
             </form>
           </div>
