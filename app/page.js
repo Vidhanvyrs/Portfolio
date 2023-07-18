@@ -355,7 +355,7 @@ export default function Home() {
             <h3 className="text-3xl py-10 dark:text-cyan-800 font-burtons">
               Connect with me and Share your thoughts 💭
             </h3>
-            <form className="mx-auto max-w-md">
+            <form ref={form} onSubmit={sendEmail} className="mx-auto max-w-md">
               {/* <label className="block">Name</label> */}
               <input
                 type="text"
