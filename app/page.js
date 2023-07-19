@@ -20,7 +20,7 @@ import {
   AiFillLinkedin,
   AiFillGithub,
 } from "react-icons/ai";
-import Form from "./Comps/Form";
+import Form from "./Form";
 
 export default function Home() {
   const [darkMode, setdarkMode] = useState(false);
