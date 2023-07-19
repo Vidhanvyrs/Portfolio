@@ -22,17 +22,27 @@ const Form = () => {
         theme: "light",
       });
       setclicker(false);
+      //   form.current.reset();
     }
   }, [clicker]);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    const name = e.target.elements.user_name.value;
+    const email = e.target.elements.user_email.value;
+    const message = e.target.elements.message.value;
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message,
+    };
 
     emailjs
-      .sendForm(
+      .send(
         "service_kdmsn5q",
         "template_467g7bi",
-        form.current,
+        templateParams,
         "YNF9oviOIkAKFnOzr"
       )
       .then(
