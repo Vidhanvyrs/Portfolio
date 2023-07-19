@@ -269,7 +269,7 @@ export default function Home() {
             </div>
 
             <div className="basis-1/3 flex-1">
-              <a href="#">
+             <a href="https://tic-tac-toe-flux.vercel.app/">
                 <Image
                   src={web4}
                   alt="web4"
