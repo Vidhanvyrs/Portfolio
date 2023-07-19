@@ -1,6 +1,6 @@
 "use client";
-import { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
+
 import Image from "next/image";
 import dotlasher from "public/dotlasher3.jpg";
 import edu from "public/edu.png";
@@ -14,15 +14,13 @@ import web5 from "public/ph6.png";
 import web6 from "public/ph7.png";
 import web7 from "public/ph8.png";
 import web8 from "public/ph9.png";
-import {
-  BsFillMoonStarsFill,
-  BsFillSunFill
-} from "react-icons/bs";
+import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillGithub,
 } from "react-icons/ai";
+import Form from "./Comps/Form";
 
 export default function Home() {
   const [darkMode, setdarkMode] = useState(false);
@@ -38,28 +36,6 @@ export default function Home() {
     <BsFillSunFill className="cursor-pointer text-2xl transition-transform duration-500 animate-spin" />
   );
 
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_kdmsn5q",
-        "template_467g7bi",
-        form.current,
-        "YNF9oviOIkAKFnOzr"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          console.log("message sent");
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
   return (
     <div className={darkMode ? "" : "dark"}>
       <main className="bg-gray-50 px-10 md:px-20 transition-colors duration-500 ease-in-out dark:bg-gray-900 dark:transition-colors dark:duration-500 dark:ease-in-out">
@@ -349,38 +325,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-     <footer className="text-center py-8 bg-stone-100 shadow-lg rounded-xl dark:bg-gray-900 dark:text-gray-200">
-          <div>
-            <h3 className="text-3xl py-10 dark:text-cyan-800 font-burtons">
-              Connect with me and Share your thoughts 💭
-            </h3>
-            <form ref={form} onSubmit={sendEmail} className="mx-auto max-w-md">
-              <input
-                type="text"
-                name="user_name"
-                placeholder="📛  Your Name"
-                className="my-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700 font-serif outline-none p-3 w-full md:w-96"
-              />
-              <input
-                type="email"
-                name="user_email"
-                placeholder="📧  Your E-mail"
-                className="my-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700 font-serif outline-none p-3 w-full md:w-96"
-              />
-              <textarea
-                name="message"
-                placeholder="✍️  Write Me Here "
-                className="my-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700 font-serif outline-none p-3 w-full md:w-96 h-48"
-              ></textarea>
-              <input
-                type="submit"
-                value="Send"
-                className="my-2 text-lg rounded-lg bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-burtons outline-none p-3 w-full md:w-52 cursor-pointer"
-              />
-            </form>
-          </div>
-        </footer>
+        <Form />
       </main>
     </div>
   );
