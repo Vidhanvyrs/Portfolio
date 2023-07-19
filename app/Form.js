@@ -22,7 +22,6 @@ const Form = () => {
         theme: "light",
       });
       setclicker(false);
-      form.current.reset();
     }
   }, [clicker]);
 
