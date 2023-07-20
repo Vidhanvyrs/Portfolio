@@ -243,7 +243,7 @@ export default function Home() {
             </div>
 
             <div className="basis-1/3 flex-1 ">
-              <a href="#">
+              <a href="https://weather-app-4pz2.vercel.app/">
                 {/* <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-75 transition-opacity duration-300 text-transparent hover:text-white">
                   WEATHER UPDATE
                 </div> */}
