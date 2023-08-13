@@ -46,11 +46,16 @@ export default function Home() {
               <h1 className="cursor-pointer text-xl font-burtons dark:text-white">
                 DotLasher
               </h1>
-              <Image
-                src={logo}
-                alt="logo"
-                className="rounded-full shadow-lg w-6 h-6 object-cover ml-5 md:w-8 md:h-8 dark:shadow-lg"
-              />
+             <a
+                href="https://drive.google.com/file/d/1AONb1pb74sQB3THc_YHuCgZO_3J_zlgj/view?usp=sharing"
+                target="_blank"
+              >
+                <Image
+                  src={logo}
+                  alt="logo"
+                  className="rounded-full shadow-lg w-6 h-6 object-cover  transition-transform duration-100 animate-spin ml-5 md:w-8 md:h-8 dark:shadow-lg cursor-pointer"
+                />
+              </a>
             </div>
             <ul className="flex items-center dark:text-white">
               <li className="rounded-sm " onClick={modehandler}>
