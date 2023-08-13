@@ -14,6 +14,7 @@ import web5 from "public/ph6.png";
 import web6 from "public/ph7.png";
 import web7 from "public/ph8.png";
 import web8 from "public/ph9.png";
+import logo from "public/logo.jpg";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import {
   AiFillTwitterCircle,
@@ -41,9 +42,16 @@ export default function Home() {
       <main className="bg-gray-50 px-10 md:px-20 transition-colors duration-500 ease-in-out dark:bg-gray-900 dark:transition-colors dark:duration-500 dark:ease-in-out">
         <section className="min-h-screen">
           <nav className="py-10 mb-10 flex justify-between ">
-            <a className="cursor-pointer text-xl font-burtons">
-              <h1 className="dark:text-white">DotLasher</h1>
-            </a>
+           <div className="flex items-center">
+              <h1 className="cursor-pointer text-xl font-burtons dark:text-white">
+                DotLasher
+              </h1>
+              <Image
+                src={logo}
+                alt="logo"
+                className="rounded-full shadow-lg w-6 h-6 object-cover ml-5 md:w-8 md:h-8 dark:shadow-lg"
+              />
+            </div>
             <ul className="flex items-center dark:text-white">
               <li className="rounded-sm " onClick={modehandler}>
                 {/* <BsFillMoonStarsFill
