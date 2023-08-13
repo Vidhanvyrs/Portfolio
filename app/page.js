@@ -57,7 +57,7 @@ export default function Home() {
 
               <li>
                 <a
-                  href="https://drive.google.com/file/d/1LNRGeD4cI2X5Z_fPPZyh25GmM_5YOMdQ/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1gAicE4dBpDBhmyBFD9yyWnu41ukGhpEO/view?usp=sharing"
                   target="_blank"
                   className="ease-in-out duration-300 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-7"
                 >
