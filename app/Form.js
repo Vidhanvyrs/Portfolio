@@ -66,18 +66,18 @@ const Form = () => {
             type="text"
             name="user_name"
             placeholder="📛  Your Name"
-            className="my-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700 font-serif outline-none p-3 w-48 md:w-96"
+            className="my-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700 font-serif outline-none p-3 w-56 md:w-full"
           />
           <input
             type="email"
             name="user_email"
             placeholder="📧  Your E-mail"
-            className="my-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700 font-serif outline-none p-3 w-48 md:w-96"
+            className="my-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700 font-serif outline-none p-3 w-56 md:w-full"
           />
           <textarea
             name="message"
             placeholder="✍️  Write Me Here "
-            className="my-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700 font-serif outline-none p-3 w-48 md:w-96 h-48"
+            className="my-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700 font-serif outline-none p-3 w-56 md:w-full h-48"
           ></textarea>
           <button
             type="submit"
