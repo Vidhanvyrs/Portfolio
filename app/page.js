@@ -43,17 +43,18 @@ export default function Home() {
         <section className="min-h-screen">
           <nav className="py-10 mb-10 flex justify-between ">
            <div className="flex items-center">
-              <h1 className="cursor-pointer text-xl font-burtons dark:text-white">
+              {/* Show logo and text on larger screens */}
+              <h1 className="hidden md:block cursor-pointer text-xl font-burtons dark:text-white">
                 DotLasher
               </h1>
-             <a
+              <a
                 href="https://drive.google.com/file/d/1AONb1pb74sQB3THc_YHuCgZO_3J_zlgj/view?usp=sharing"
                 target="_blank"
               >
                 <Image
                   src={logo}
                   alt="logo"
-                  className="rounded-full shadow-lg w-6 h-6 object-cover  transition-transform duration-100 animate-spin ml-5 md:w-8 md:h-8 dark:shadow-lg cursor-pointer"
+                  className="rounded-full shadow-lg w-6 h-6 object-cover transition-transform duration-100 animate-spin md:ml-5  ml-2 md:w-8 md:h-8 dark:shadow-lg cursor-pointer"
                 />
               </a>
             </div>
@@ -72,7 +73,7 @@ export default function Home() {
                 <a
                   href="https://drive.google.com/file/d/1gAicE4dBpDBhmyBFD9yyWnu41ukGhpEO/view?usp=sharing"
                   target="_blank"
-                  className="ease-in-out duration-300 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-7"
+                  className=" font-burtons ease-in-out duration-300 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-7"
                 >
                   RESUME
                 </a>
