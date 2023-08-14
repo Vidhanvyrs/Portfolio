@@ -22,6 +22,7 @@ import {
   AiFillGithub,
 } from "react-icons/ai";
 import Form from "./Form";
+import Cursor from "./Cursor";
 
 export default function Home() {
   const [darkMode, setdarkMode] = useState(false);
@@ -32,54 +33,58 @@ export default function Home() {
   };
 
   const icon = myicon ? (
-    <BsFillMoonStarsFill className="cursor-pointer text-2xl transition-transform duration-500" />
+    <BsFillMoonStarsFill className="cursor-none text-2xl transition-transform duration-500 moon-icon" />
   ) : (
-    <BsFillSunFill className="cursor-pointer text-2xl transition-transform duration-500 animate-spin" />
+    <BsFillSunFill className="cursor-none text-2xl transition-transform duration-500 animate-spin sun-icon" />
   );
 
   return (
     <div className={darkMode ? "" : "dark"}>
-      <main className="bg-gray-50 px-10 md:px-20 transition-colors duration-500 ease-in-out dark:bg-gray-900 dark:transition-colors dark:duration-500 dark:ease-in-out">
-        <section className="min-h-screen">
-          <nav className="py-10 mb-10 flex justify-between ">
-           <div className="flex items-center">
-              {/* Show logo and text on larger screens */}
-              <h1 className="hidden md:block cursor-pointer text-xl font-burtons dark:text-white">
-                DotLasher
-              </h1>
-              <a
-                href="https://drive.google.com/file/d/1AONb1pb74sQB3THc_YHuCgZO_3J_zlgj/view?usp=sharing"
-                target="_blank"
-              >
-                <Image
-                  src={logo}
-                  alt="logo"
-                  className="rounded-full shadow-lg w-6 h-6 object-cover transition-transform duration-100 animate-spin md:ml-5  ml-2 md:w-8 md:h-8 dark:shadow-lg cursor-pointer"
-                />
-              </a>
-            </div>
-            <ul className="flex items-center dark:text-white">
-              <li className="rounded-sm " onClick={modehandler}>
-                {/* <BsFillMoonStarsFill
+      <Cursor />
+      <main className="bg-gray-50 px-5 transition-colors duration-500 ease-in-out dark:bg-gray-900 dark:transition-colors dark:duration-500 dark:ease-in-out w-full cursor-none">
+        <nav className="sticky  top-0  z-10 backdrop-blur-md md:px-2 py-5 mb-5 flex justify-between w-full">
+          <div className="flex items-center w-full">
+            {/* Show logo and text on larger screens */}
+            <h1 className="hidden md:block cursor-none text-xl font-burtons dark:text-white">
+              DotLasher
+            </h1>
+            <a
+              href="https://drive.google.com/file/d/1AONb1pb74sQB3THc_YHuCgZO_3J_zlgj/view?usp=sharing"
+              target="_blank"
+              className="keyb"
+            >
+              <Image
+                src={logo}
+                alt="logo"
+                className="rounded-full shadow-lg w-6 h-6 object-cover dark:transition-transform dark:duration-100 dark:animate-pulse md:ml-5 md:w-8 md:h-8 dark:shadow-lg cursor-none "
+              />
+            </a>
+          </div>
+
+          <ul className="flex items-center dark:text-white">
+            <li className="rounded-sm mr-12 new " onClick={modehandler}>
+              {/* <BsFillMoonStarsFill
                   onClick={() => {
                     setdarkMode(!darkMode);
                   }}
                   className="cursor-pointer text-2xl"
                 /> */}
-                {icon}
-              </li>
+              {icon}
+            </li>
 
-              <li>
-                <a
-                  href="https://drive.google.com/file/d/1gAicE4dBpDBhmyBFD9yyWnu41ukGhpEO/view?usp=sharing"
-                  target="_blank"
-                  className=" font-burtons ease-in-out duration-300 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-7"
-                >
-                  RESUME
-                </a>
-              </li>
-            </ul>
-          </nav>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1gAicE4dBpDBhmyBFD9yyWnu41ukGhpEO/view?usp=sharing"
+                target="_blank"
+                className="font-burtons ease-in-out duration-300 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-7"
+                id="new2"
+              >
+                RESUME
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <section className="min-h-screen max-w-full">
           <div className="text-center p-5">
             <div className="py-1">
               <Image
@@ -88,8 +93,8 @@ export default function Home() {
                 className="mx-auto  rounded-full shadow-lg w-60 h-60 object-cover m-5 overflow-hidden md:w-80 md:h-80 dark:shadow-lg"
               />
             </div>
-            <h2 className="text-4xl py-2 text-teal-700 font-medium font-burtons leading-tight md:text-6xl">
-              Vidhan Solanki
+            <h2 className=" text-4xl md:text-7xl py-2 text-teal-700 font-medium font-burtons leading-tight">
+              Vidhan Solanki🖖
             </h2>
 
             <h3 className="text-xl py-5  font-burtons md:text-3xl dark: text-cyan-800">
@@ -109,24 +114,33 @@ export default function Home() {
               extends in making myself a quality Full Stack developer😉
             </p>
             <div className="text-4xl flex justify-center gap-16 py-10 text-gray-600 md:gap-40 dark:text-gray-400">
-              <a href="https://twitter.com/DotLasher" target="_blank">
-                <AiFillTwitterCircle className="hover:text-black dark:hover:text-white cursor-pointer" />
+              <a
+                href="https://twitter.com/DotLasher"
+                target="_blank"
+                className="new"
+              >
+                <AiFillTwitterCircle className="hover:text-black dark:hover:text-white cursor-none" />
               </a>
               <a
                 href="https://www.linkedin.com/in/vidhan-solanki-184695226/"
                 target="_blank"
+                className="new"
               >
-                <AiFillLinkedin className="hover:text-black dark:hover:text-white  cursor-pointer" />
+                <AiFillLinkedin className="hover:text-black dark:hover:text-white  cursor-none" />
               </a>
-              <a href="https://github.com/Vidhanvyrs" target="_blank">
-                <AiFillGithub className="hover:text-black dark:hover:text-white  cursor-pointer" />
+              <a
+                href="https://github.com/Vidhanvyrs"
+                target="_blank"
+                className="new"
+              >
+                <AiFillGithub className="hover:text-black dark:hover:text-white  cursor-none" />
               </a>
             </div>
           </div>
         </section>
         <section className="text-center py-10">
           <div>
-            <h3 className="text-3xl  dark:text-cyan-800 font-burtons">
+            <h3 className="text-3xl dark:text-cyan-800 font-burtons">
               Skills & Services
             </h3>
             <p className="text-lg py-2 leading-7 text-gray-700 dark:text-white">
@@ -249,7 +263,7 @@ export default function Home() {
                 <Image
                   src={web1}
                   alt="web1"
-                  className="rounded-lg object-cover shadow-xl transform hover:scale-105 transition-transform duration-300"
+                  className="rounded-lg object-cover shadow-xl transform hover:scale-105 transition-transform duration-300 keyb"
                   width={"100%"}
                   height={"100%"}
                 />
@@ -264,7 +278,7 @@ export default function Home() {
                 <Image
                   src={web2}
                   alt="web2"
-                  className="rounded-lg object-cover shadow-xl transform hover:scale-105 transition-transform duration-300"
+                  className="rounded-lg object-cover shadow-xl transform hover:scale-105 transition-transform duration-300 keyb"
                   width={"100%"}
                   height={"100%"}
                 />
@@ -275,7 +289,7 @@ export default function Home() {
                 <Image
                   src={web3}
                   alt="web3"
-                  className="rounded-lg object-cover shadow-xl transform hover:scale-105 transition-transform duration-300"
+                  className="rounded-lg object-cover shadow-xl transform hover:scale-105 transition-transform duration-300 keyb"
                   width={"100%"}
                   height={"100%"}
                 />
@@ -283,11 +297,11 @@ export default function Home() {
             </div>
 
             <div className="basis-1/3 flex-1">
-             <a href="https://tic-tac-toe-flux.vercel.app/">
+              <a href="https://tic-tac-toe-flux.vercel.app/">
                 <Image
                   src={web4}
                   alt="web4"
-                  className="rounded-lg object-cover shadow-xl transform hover:scale-105 transition-transform duration-300"
+                  className="rounded-lg object-cover shadow-xl transform hover:scale-105 transition-transform duration-300 keyb"
                   width={"100%"}
                   height={"100%"}
                 />
@@ -298,7 +312,7 @@ export default function Home() {
                 <Image
                   src={web5}
                   alt="web5"
-                  className="rounded-lg object-cover shadow-xl transform hover:scale-105 transition-transform duration-300"
+                  className="rounded-lg object-cover shadow-xl transform hover:scale-105 transition-transform duration-300 keyb"
                   width={"100%"}
                   height={"100%"}
                 />
@@ -309,7 +323,7 @@ export default function Home() {
                 <Image
                   src={web6}
                   alt="web6"
-                  className="rounded-lg object-cover shadow-xl transform hover:scale-105 transition-transform duration-300"
+                  className="rounded-lg object-cover shadow-xl transform hover:scale-105 transition-transform duration-300 keyb"
                   width={"100%"}
                   height={"100%"}
                 />
@@ -320,7 +334,7 @@ export default function Home() {
                 <Image
                   src={web7}
                   alt="web7"
-                  className="rounded-lg object-cover shadow-xl transform hover:scale-105 transition-transform duration-300"
+                  className="rounded-lg object-cover shadow-xl transform hover:scale-105 transition-transform duration-300 keyb"
                   width={"100%"}
                   height={"100%"}
                 />
@@ -331,7 +345,7 @@ export default function Home() {
                 <Image
                   src={web8}
                   alt="web8"
-                  className="rounded-lg object-cover shadow-xl transform hover:scale-105 transition-transform duration-300"
+                  className="rounded-lg object-cover shadow-xl transform hover:scale-105 transition-transform duration-300 keyb"
                   width={"100%"}
                   height={"100%"}
                 />
