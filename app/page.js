@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <div className={darkMode ? "" : "dark"}>
-      <Cursor />
+      
       <main className="bg-gray-50 px-5 transition-colors duration-500 ease-in-out dark:bg-gray-900 dark:transition-colors dark:duration-500 dark:ease-in-out w-full cursor-none">
         <nav className="sticky  top-0  z-10 backdrop-blur-md md:px-2 py-5 mb-5 flex justify-between w-full">
           <div className="flex items-center w-full">
@@ -138,6 +138,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <Cursor />
         <section className="text-center py-10">
           <div>
             <h3 className="text-3xl dark:text-cyan-800 font-burtons">
