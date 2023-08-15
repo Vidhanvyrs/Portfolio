@@ -12,7 +12,7 @@ a {
   cursor: none;
 }
 .gif {
-  background-image: url("icons8-eye.gif");
+  background-image: url("anothereye.gif");
   background-size: cover;
   background-repeat: no-repeat;
   width: 1px; /* Adjust the width as needed */
