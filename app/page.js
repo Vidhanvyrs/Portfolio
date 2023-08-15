@@ -56,7 +56,7 @@ export default function Home() {
               <Image
                 src={logo}
                 alt="logo"
-                className="rounded-full shadow-lg w-6 h-6 object-cover dark:transition-transform dark:duration-100 dark:animate-pulse md:ml-5 md:w-8 md:h-8 dark:shadow-lg cursor-none "
+                className="cursor-pointer rounded-full shadow-lg w-6 h-6 object-cover dark:transition-transform dark:duration-100 dark:animate-pulse md:ml-5 md:w-8 md:h-8 dark:shadow-lg cursor-none "
               />
             </a>
           </div>
@@ -76,7 +76,7 @@ export default function Home() {
               <a
                 href="https://drive.google.com/file/d/1gAicE4dBpDBhmyBFD9yyWnu41ukGhpEO/view?usp=sharing"
                 target="_blank"
-                className="font-burtons ease-in-out duration-300 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-7"
+                className="cursor-pointer font-burtons ease-in-out duration-300 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-7"
                 id="new2"
               >
                 RESUME
