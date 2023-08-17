@@ -322,7 +322,6 @@ export default function Home() {
             <div className="basis-1/3 flex-1">
               <a
                 href="https://expense-tracker-pi-gray.vercel.app/"
-                className="flex flex-col"
               >
                 <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
                   <Image
