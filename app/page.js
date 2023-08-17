@@ -289,7 +289,7 @@ export default function Home() {
                   <Image
                     src={web1}
                     alt="web1"
-                    className="w-full h-full object-cover overflow-hidden"
+                    className="w-full h-full object-cover overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
@@ -309,7 +309,7 @@ export default function Home() {
                   <Image
                     src={web2}
                     alt="web2"
-                    className="w-full h-full object-cover overflow-hidden"
+                    className="w-full h-full object-cover overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
@@ -320,12 +320,15 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <a href="https://expense-tracker-pi-gray.vercel.app/">
+              <a
+                href="https://expense-tracker-pi-gray.vercel.app/"
+                className="flex flex-col"
+              >
                 <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
                   <Image
                     src={web3}
                     alt="web3"
-                    className="w-full h-full object-cover overflow-hidden"
+                    className="w-full h-full object-cover overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
@@ -342,7 +345,7 @@ export default function Home() {
                   <Image
                     src={web4}
                     alt="web4"
-                    className="w-full h-full object-cover overflow-hidden"
+                    className="w-full h-full object-cover overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
@@ -358,7 +361,7 @@ export default function Home() {
                   <Image
                     src={web5}
                     alt="web5"
-                    className="w-full h-full object-cover overflow-hidden"
+                    className="w-full h-full object-cover overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
@@ -374,7 +377,7 @@ export default function Home() {
                   <Image
                     src={web6}
                     alt="web6"
-                    className="w-full h-full object-cover overflow-hidden"
+                    className="w-full h-full object-cover overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
@@ -390,7 +393,7 @@ export default function Home() {
                   <Image
                     src={web7}
                     alt="web7"
-                    className="w-full h-full object-cover overflow-hidden"
+                    className="w-full h-full object-cover overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
@@ -406,7 +409,7 @@ export default function Home() {
                   <Image
                     src={web8}
                     alt="web8"
-                    className="w-full h-full object-cover overflow-hidden"
+                    className="w-full h-full object-cover overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
