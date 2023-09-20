@@ -66,7 +66,7 @@ export default function Home() {
               DotLasher
             </h1>
             <a
-              href="https://drive.google.com/file/d/1AONb1pb74sQB3THc_YHuCgZO_3J_zlgj/view?usp=sharing"
+              href="https://drive.google.com/file/d/1SjyqcO4bnzpMphz-u64hopJML07eLY4i/view?usp=sharing"
               target="_blank"
               className="keyb"
             >
@@ -91,7 +91,7 @@ export default function Home() {
 
             <li>
               <a
-                href="https://drive.google.com/file/d/1gAicE4dBpDBhmyBFD9yyWnu41ukGhpEO/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Z7aiRUhChyFFOUJ7q1NpDkUBM2f28lTJ/view?usp=sharing"
                 target="_blank"
                 className="font-burtons ease-in-out duration-300 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-7 cursor-pointer"
                 id="new2"
