@@ -17,6 +17,7 @@ import web8 from "public/ph9.png";
 import web9 from "public/physioplus.png";
 import web10 from "public/dms.png";
 import web11 from "public/vp.png";
+import web12 from "public/chart.js";
 import logo from "public/logo.jpg";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import {
@@ -391,6 +392,24 @@ export default function Home() {
                 </div>
                 <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
                   VP.
+                </button>
+              </a>
+            </div>
+                           <div className="basis-1/3 flex-1">
+              <a
+                href="chart-basic-app.vercel.app/"
+              >
+                <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
+                  <Image
+                    src={web12}
+                    alt="web12"
+                    className="w-full h-full object-cover overflow-hidden rounded-lg"
+                    width={"100%"}
+                    height={"100%"}
+                  />
+                </div>
+                <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
+                ChartApp
                 </button>
               </a>
             </div>
