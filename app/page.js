@@ -14,6 +14,9 @@ import web5 from "public/ph6.png";
 import web6 from "public/ph7.png";
 import web7 from "public/ph8.png";
 import web8 from "public/ph9.png";
+import web9 from "public/physioplus.png";
+import web10 from "public/dms.png;
+import web11 from "public/vp.png;
 import logo from "public/logo.jpg";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import {
@@ -334,6 +337,60 @@ export default function Home() {
                 </div>
                 <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
                   ExpenseTracker
+                </button>
+              </a>
+            </div>
+                           <div className="basis-1/3 flex-1">
+              <a
+                href="https://www.physioplushealthcare.com/"
+              >
+                <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
+                  <Image
+                    src={web9}
+                    alt="web9"
+                    className="w-full h-full object-cover overflow-hidden rounded-lg"
+                    width={"100%"}
+                    height={"100%"}
+                  />
+                </div>
+                <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
+                  PhysioPlus.
+                </button>
+              </a>
+            </div>
+                           <div className="basis-1/3 flex-1">
+              <a
+                href="https://www.dmssecurity.in/"
+              >
+                <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
+                  <Image
+                    src={web10}
+                    alt="web10"
+                    className="w-full h-full object-cover overflow-hidden rounded-lg"
+                    width={"100%"}
+                    height={"100%"}
+                  />
+                </div>
+                <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
+                 DMS.
+                </button>
+              </a>
+            </div>
+                           <div className="basis-1/3 flex-1">
+              <a
+                href="https://vp-zeta.vercel.app/"
+              >
+                <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
+                  <Image
+                    src={web11}
+                    alt="web11"
+                    className="w-full h-full object-cover overflow-hidden rounded-lg"
+                    width={"100%"}
+                    height={"100%"}
+                  />
+                </div>
+                <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
+                  VP.
                 </button>
               </a>
             </div>
