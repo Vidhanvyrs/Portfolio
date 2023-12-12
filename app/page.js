@@ -15,7 +15,7 @@ import web6 from "public/ph7.png";
 import web7 from "public/ph8.png";
 import web8 from "public/ph9.png";
 import web9 from "public/physioplus.png";
-import web10 from "public/dms.png;
+import web10 from "public/dms.png";
 import web11 from "public/vp.png";
 import logo from "public/logo.jpg";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
