@@ -343,7 +343,7 @@ export default function Home() {
             </div>
                            <div className="basis-1/3 flex-1">
               <a
-                href="https://www.physioplushealthcare.com/"
+                href="https://physioplushealthcare.com/"
               >
                 <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
                   <Image
