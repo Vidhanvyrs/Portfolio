@@ -17,7 +17,9 @@ import web8 from "public/ph9.png";
 import web9 from "public/physioplus.png";
 import web10 from "public/dms.png";
 import web11 from "public/vp.png";
-import web12 from "public/charts.png";
+import web12 from "public/reactchart.png";
+import dimple from "public/dimple.png";
+import gallery from "public/imggallery.png";
 import logo from "public/logo.jpg";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import {
@@ -31,22 +33,6 @@ import Cursor from "./Cursor";
 export default function Home() {
   const [darkMode, setdarkMode] = useState(false);
   const [myicon, seticon] = useState(false);
-  // useEffect(() => {
-  //   // Initialize ScrollOut when the component mounts
-  //   const scrollOutInstance = ScrollOut({
-  //     onShown: function (el) {
-  //       el.animate([{ opacity: 0 }, { opacity: 0.2 }], { duration: 1000 });
-  //     },
-  //     onHidden: function (el) {
-  //       el.style.opacity = 0;
-  //     },
-  //   });
-
-  //   // Clean up ScrollOut when the component unmounts
-  //   return () => {
-  //     scrollOutInstance.teardown();
-  //   };
-  // }, [darkMode]);
 
   const modehandler = () => {
     setdarkMode(!darkMode);
@@ -54,19 +40,19 @@ export default function Home() {
   };
 
   const icon = myicon ? (
-    <BsFillMoonStarsFill className="cursor-none text-2xl transition-transform duration-500 moon-icon" />
+    <BsFillMoonStarsFill className="text-2xl transition-transform duration-500 cursor-none moon-icon" />
   ) : (
-    <BsFillSunFill className="cursor-none text-2xl transition-transform duration-500 animate-spin sun-icon" />
+    <BsFillSunFill className="text-2xl transition-transform duration-500 cursor-none animate-spin sun-icon" />
   );
 
   return (
     <div className={darkMode ? "" : "dark"}>
       {/* <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Amatic+SC:wght@700&family=Anton&family=Bangers&family=Barlow+Condensed:wght@100&family=Bebas+Neue&family=Bungee+Spice&family=Climate+Crisis&family=Inspiration&family=Modak&family=Nabla&family=Press+Start+2P&family=Shadows+Into+Light&family=Silkscreen&family=Smokum&family=Special+Elite&family=VT323&family=Vina+Sans&display=swap" rel="stylesheet"></link> */}
-      <main className="bg-gray-50 px-5 transition-colors duration-500 ease-in-out dark:bg-gray-900 dark:transition-colors dark:duration-500 dark:ease-in-out w-full cursor-none">
-        <nav className="sticky  top-0  z-10 backdrop-blur-md md:px-2 py-5 mb-5 flex justify-between w-full">
+      <main className="w-full px-5 transition-colors duration-500 ease-in-out bg-gray-50 dark:bg-gray-900 dark:transition-colors dark:duration-500 dark:ease-in-out cursor-none">
+        <nav className="sticky top-0 z-10 flex justify-between w-full py-5 mb-5 backdrop-blur-md md:px-2">
           <div className="flex items-center w-full">
             {/* Show logo and text on larger screens */}
-            <h1 className="hidden md:block cursor-none text-xl font-burtons dark:text-white">
+            <h1 className="hidden text-xl md:block cursor-none font-burtons dark:text-white">
               DotLasher
             </h1>
             <a
@@ -77,18 +63,18 @@ export default function Home() {
               <Image
                 src={logo}
                 alt="logo"
-                className="rounded-full shadow-lg w-6 h-6 object-cover dark:transition-transform dark:duration-100 dark:animate-pulse md:ml-5 md:w-8 md:h-8 dark:shadow-lg cursor-pointer "
+                className="object-cover w-6 h-6 rounded-full shadow-lg cursor-pointer dark:transition-transform dark:duration-100 dark:animate-pulse md:ml-5 md:w-8 md:h-8 dark:shadow-lg "
               />
             </a>
           </div>
 
           <ul className="flex items-center dark:text-white">
-            <li className="rounded-sm mr-12 new " onClick={modehandler}>
+            <li className="mr-12 rounded-sm new " onClick={modehandler}>
               {/* <BsFillMoonStarsFill
                   onClick={() => {
                     setdarkMode(!darkMode);
                   }}
-                  className="cursor-pointer text-2xl"
+                  className="text-2xl cursor-pointer"
                 /> */}
               {icon}
             </li>
@@ -97,7 +83,7 @@ export default function Home() {
               <a
                 href="https://drive.google.com/file/d/1Z7aiRUhChyFFOUJ7q1NpDkUBM2f28lTJ/view?usp=sharing"
                 target="_blank"
-                className="font-burtons ease-in-out duration-300 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-7 cursor-pointer"
+                className="px-4 py-2 text-white duration-300 ease-in-out rounded-md cursor-pointer font-burtons bg-gradient-to-r from-cyan-500 to-teal-500 ml-7"
                 id="new2"
               >
                 RESUME
@@ -106,29 +92,29 @@ export default function Home() {
           </ul>
         </nav>
 
-        <section className="min-h-screen max-w-full">
-          <div className="text-center p-5">
+        <section className="max-w-full min-h-screen">
+          <div className="p-5 text-center">
             <div className="py-1">
               <Image
                 src={dotlasher}
                 alt="dotlasher"
-                className="mx-auto  rounded-full shadow-lg w-60 h-60 object-cover m-5 overflow-hidden md:w-80 md:h-80 dark:shadow-lg"
+                className="object-cover m-5 mx-auto overflow-hidden rounded-full shadow-lg w-60 h-60 md:w-80 md:h-80 dark:shadow-lg"
               />
             </div>
-            <h2 className=" text-4xl md:text-7xl py-2 text-teal-700 font-medium font-burtons leading-tight">
+            <h2 className="py-2 text-4xl font-medium leading-tight text-teal-700 md:text-7xl font-burtons">
               Vidhan Solanki🖖
             </h2>
-            {/* <h1 className=" text-gray-300 text-5xl">Vidhan Solanki</h1>
+            {/* <h1 className="text-5xl text-gray-300 ">Vidhan Solanki</h1>
             <h1 className=" text-gray-500 text-5xl before:content-attr(data-text) absolute overflow-hidden max-w-7em whitespace-nowrap text-white animate-loading">
               Vidhan Solanki
             </h1> */}
 
-            <h3 className="text-xl py-5  font-burtons md:text-3xl dark: text-cyan-800">
+            <h3 className="py-5 text-xl font-burtons md:text-3xl dark: text-cyan-800">
               Programmer & Developer
             </h3>
             {/* 🗒️📂 ⚙️🔗*/}
             <div className="scroll-out">
-              <p className="text-md py-3 leading-7 text-gray-700 md:text-xl max-w-lg mx-auto dark:text-white md:max-w-4xl">
+              <p className="max-w-lg py-3 mx-auto leading-7 text-gray-700 text-md md:text-xl dark:text-white md:max-w-4xl">
                 👋 Bonjour! I am a passionate Computer Science Student immersed
                 in the captivating realm of Web Development 🌐. With boundless
                 enthusiasm, I create mesmerizing 📱applications, elegant
@@ -141,7 +127,7 @@ export default function Home() {
                 goal extends in making myself a quality Full Stack developer😉
               </p>
             </div>
-            <div className="text-4xl flex justify-center gap-16 py-10 text-gray-600 md:gap-40 dark:text-gray-400">
+            <div className="flex justify-center gap-16 py-10 text-4xl text-gray-600 md:gap-40 dark:text-gray-400">
               <a
                 href="https://twitter.com/DotLasher"
                 target="_blank"
@@ -154,25 +140,25 @@ export default function Home() {
                 target="_blank"
                 className="new"
               >
-                <AiFillLinkedin className="hover:text-black dark:hover:text-white  cursor-none" />
+                <AiFillLinkedin className="hover:text-black dark:hover:text-white cursor-none" />
               </a>
               <a
                 href="https://github.com/Vidhanvyrs"
                 target="_blank"
                 className="new"
               >
-                <AiFillGithub className="hover:text-black dark:hover:text-white  cursor-none" />
+                <AiFillGithub className="hover:text-black dark:hover:text-white cursor-none" />
               </a>
             </div>
           </div>
         </section>
         <Cursor />
-        <section className="text-center py-10">
+        <section className="py-10 text-center">
           <div>
             <h3 className="text-3xl dark:text-cyan-800 font-burtons">
               Skills & Services
             </h3>
-            <p className="text-lg py-2 leading-7 text-gray-700 dark:text-white">
+            <p className="py-2 text-lg leading-7 text-gray-700 dark:text-white">
               📄 Technical skills are the specialized knowledge and expertise
               required to perform specific tasks and use specific tools and
               programs in real-world situations. Thats the definition, which is
@@ -181,14 +167,14 @@ export default function Home() {
               it comes to technical skills, they are often acquired through
               unwavering consistency 💪 and sheer hard work! 🗿
             </p>
-            <p className="text-lg py-2 leading-7 text-gray-700 dark:text-white ">
+            <p className="py-2 text-lg leading-7 text-gray-700 dark:text-white ">
               As a 🧑Fresher I do not possess a lot of skills but the ones i
               possess are what shows my dignity,hardwork as well as discipline
               towards my goal🎯 <br></br>Below are my Skills ⬇️
             </p>
           </div>
-          <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+          <div className="gap-10 lg:flex ">
+            <div className="flex-1 p-10 my-10 text-center shadow-lg rounded-xl dark:bg-white">
               <Image
                 src={code}
                 alt="code"
@@ -196,7 +182,7 @@ export default function Home() {
                 width={100}
                 height={100}
               />
-              <h3 className="text-lg font-medium pt-8 pb-2 font-burtons">
+              <h3 className="pt-8 pb-2 text-lg font-medium font-burtons">
                 Developer & Designer
               </h3>
               <p className="py-3">
@@ -206,16 +192,18 @@ export default function Home() {
                 development to deliver exceptional
               </p>
               <h4 className="py-4 text-teal-600">
-                Frameworks/Technologies I use
+                Frameworks/Technologies I enjoy💖.
               </h4>
-              <ul className=" text-gray-700">
+              <ul className="text-gray-700 ">
                 <li className="py-1">- ReactJs</li>
+                <li className="py-1">- NextJs</li>
+                <li className="py-1">- NodeJs</li>
+                <li className="py-1">- ExpressJs</li>
                 <li className="py-1">- Tailwind</li>
-                <li className="py-1">- Figma</li>
-                <li className="py-1">- Git</li>
+                <li className="py-1">- ShadCn</li>
               </ul>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+            <div className="flex-1 p-10 my-10 text-center shadow-lg rounded-xl dark:bg-white">
               <Image
                 src={edu}
                 alt="edu"
@@ -223,7 +211,7 @@ export default function Home() {
                 width={100}
                 height={100}
               />
-              <h3 className="text-lg font-medium pt-8 pb-2 font-burtons">
+              <h3 className="pt-8 pb-2 text-lg font-medium font-burtons">
                 Technical Skills
               </h3>
               <p className="py-3">
@@ -232,15 +220,17 @@ export default function Home() {
                 With a solid foundation in web development, I am well-versed in
                 the latest technologies and frameworks.
               </p>
-              <h4 className="py-4 text-teal-600">Languages I use</h4>
-              <ul className=" text-gray-700">
-                <li className="py-1">- Java</li>
+              <h4 className="py-4 text-teal-600">Skills I possess😎.</h4>
+              <ul className="text-gray-700 ">
                 <li className="py-1">- Javascript</li>
-                <li className="py-1">- HTML5</li>
-                <li className="py-1">- CSS3</li>
+                <li className="py-1">- Java</li>
+                <li className="py-1">- HTML5/CSS3</li>
+                <li className="py-1">- Git/vercel</li>
+                <li className="py-1">- MongoDB/Sql</li>
+                <li className="py-1">- Firebase/Appwrite</li>
               </ul>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1 ">
+            <div className="flex-1 p-10 my-10 text-center shadow-lg rounded-xl dark:bg-white ">
               <Image
                 src={consult}
                 alt="code"
@@ -248,7 +238,7 @@ export default function Home() {
                 height={100}
                 className="mx-auto"
               />
-              <h3 className="text-lg font-medium pt-8  pb-2 font-burtons">
+              <h3 className="pt-8 pb-2 text-lg font-medium font-burtons">
                 Passion
               </h3>
               <p className="py-3">
@@ -257,22 +247,24 @@ export default function Home() {
                 technologies, push boundaries.This passion drives me to create
                 innovative and impactful solutions
               </p>
-              <h4 className="py-4 text-teal-600">Qualities I display</h4>
-              <ul className=" text-gray-700">
+              <h4 className="py-4 text-teal-600">Qualities I display🥂.</h4>
+              <ul className="text-gray-700 ">
                 <li className="py-1">- Quick learner</li>
                 <li className="py-1">- Team collaboration</li>
-                <li className="py-1">- Strong problem-solving skills</li>
+                <li className="py-1">- Strong problem-solving Skills</li>
                 <li className="py-1">- Proactive approach</li>
+                <li className="py-1">- 'Never say Die' Attitude</li>
+                <li className="py-1">- Strong Communication Skills</li>
               </ul>
             </div>
           </div>
         </section>
-        <section className="text-center py-8">
+        <section className="py-8 text-center">
           <div>
-            <h3 className="text-3xl py-1 dark:text-cyan-800 font-burtons">
+            <h3 className="py-1 text-3xl dark:text-cyan-800 font-burtons">
               Portfolio
             </h3>
-            <p className="text-md py-2 leading-7 text-gray-700 dark:text-white">
+            <p className="py-2 leading-7 text-gray-700 text-md dark:text-white">
               Since the beginning of my 🗺️journey as a 🔰frontend developer I
               have done a lot of work on my projects & my skills I have gone
               through some Udemy courses, some youtube courses, Made some
@@ -281,215 +273,237 @@ export default function Home() {
               I am for sure Not rich in experience but i am a quick learner and
               thats what matters❗
             </p>
-            <p className="text-md py-2 leading-7 text-gray-700 dark:text-white">
+            <p className="py-2 leading-7 text-gray-700 text-md dark:text-white">
               Here are some of the projects that signifies my React and Web D
               skills⬇️
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1 group relative">
-              <a href="https://mealxotic-me8k.vercel.app/">
-                <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
+            <div className="relative flex-1 basis-1/3 group">
+              <a href="https://dimplegram.vercel.app/">
+                <div className="transition-transform duration-300 transform rounded-lg shadow-xl hover:scale-105 keyb">
                   <Image
-                    src={web1}
-                    alt="web1"
-                    className="w-full h-full object-cover overflow-hidden rounded-lg"
+                    src={dimple}
+                    alt="dimple"
+                    className="object-cover w-full h-full overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
                 </div>
-                <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
+                <button className="inline-block p-2 mt-4 text-lg bg-orange-100 border shadow-lg rounded-xl border-cyan-800 font-burtons text-cyan-800">
+                  Dimple.
+                </button>
+              </a>
+            </div>
+            <div className="relative flex-1 basis-1/3 group">
+              <a href="https://t3gallery-rho-sepia.vercel.app/">
+                <div className="transition-transform duration-300 transform rounded-lg shadow-xl hover:scale-105 keyb">
+                  <Image
+                    src={gallery}
+                    alt="gallery"
+                    className="object-cover w-full h-full overflow-hidden rounded-lg"
+                    width={"100%"}
+                    height={"100%"}
+                  />
+                </div>
+                <button className="inline-block p-2 mt-4 text-lg bg-orange-100 border shadow-lg rounded-xl border-cyan-800 font-burtons text-cyan-800">
+                  ImgGallery.
+                </button>
+              </a>
+            </div>
+            <div className="relative flex-1 basis-1/3 group">
+              <a href="https://mealxotic-me8k.vercel.app/">
+                <div className="transition-transform duration-300 transform rounded-lg shadow-xl hover:scale-105 keyb">
+                  <Image
+                    src={web1}
+                    alt="web1"
+                    className="object-cover w-full h-full overflow-hidden rounded-lg"
+                    width={"100%"}
+                    height={"100%"}
+                  />
+                </div>
+                <button className="inline-block p-2 mt-4 text-lg bg-orange-100 border shadow-lg rounded-xl border-cyan-800 font-burtons text-cyan-800">
                   FoodApp
                 </button>
               </a>
             </div>
 
-            <div className="basis-1/3 flex-1 ">
+            <div className="flex-1 basis-1/3 ">
               <a href="https://weather-app-4pz2.vercel.app/">
-                {/* <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-75 transition-opacity duration-300 text-transparent hover:text-white">
+                {/* <div className="absolute inset-0 flex items-center justify-center text-transparent transition-opacity duration-300 bg-black bg-opacity-0 group-hover:bg-opacity-75 hover:text-white">
                   WEATHER UPDATE
                 </div> */}
-                <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
+                <div className="transition-transform duration-300 transform rounded-lg shadow-xl hover:scale-105 keyb">
                   <Image
                     src={web2}
                     alt="web2"
-                    className="w-full h-full object-cover overflow-hidden rounded-lg"
+                    className="object-cover w-full h-full overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
                 </div>
-                <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
+                <button className="inline-block p-2 mt-4 text-lg bg-orange-100 border shadow-lg rounded-xl border-cyan-800 font-burtons text-cyan-800">
                   WeatherApp
                 </button>
               </a>
             </div>
-            <div className="basis-1/3 flex-1">
-              <a
-                href="https://expense-tracker-pi-gray.vercel.app/"
-              >
-                <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
+            <div className="flex-1 basis-1/3">
+              <a href="https://expense-tracker-pi-gray.vercel.app/">
+                <div className="transition-transform duration-300 transform rounded-lg shadow-xl hover:scale-105 keyb">
                   <Image
                     src={web3}
                     alt="web3"
-                    className="w-full h-full object-cover overflow-hidden rounded-lg"
+                    className="object-cover w-full h-full overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
                 </div>
-                <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
+                <button className="inline-block p-2 mt-4 text-lg bg-orange-100 border shadow-lg rounded-xl border-cyan-800 font-burtons text-cyan-800">
                   ExpenseTracker
                 </button>
               </a>
             </div>
-                           <div className="basis-1/3 flex-1">
-              <a
-                href="https://physioplushealthcare.com/"
-              >
-                <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
+            <div className="flex-1 basis-1/3">
+              <a href="https://physioplushealthcare.com/">
+                <div className="transition-transform duration-300 transform rounded-lg shadow-xl hover:scale-105 keyb">
                   <Image
                     src={web9}
                     alt="web9"
-                    className="w-full h-full object-cover overflow-hidden rounded-lg"
+                    className="object-cover w-full h-full overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
                 </div>
-                <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
+                <button className="inline-block p-2 mt-4 text-lg bg-orange-100 border shadow-lg rounded-xl border-cyan-800 font-burtons text-cyan-800">
                   PhysioPlus.
                 </button>
               </a>
             </div>
-                           <div className="basis-1/3 flex-1">
-              <a
-                href="https://www.dmssecurity.in/"
-              >
-                <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
+            <div className="flex-1 basis-1/3">
+              <a href="https://www.dmssecurity.in/">
+                <div className="transition-transform duration-300 transform rounded-lg shadow-xl hover:scale-105 keyb">
                   <Image
                     src={web10}
                     alt="web10"
-                    className="w-full h-full object-cover overflow-hidden rounded-lg"
+                    className="object-cover w-full h-full overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
                 </div>
-                <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
-                 DMS.
+                <button className="inline-block p-2 mt-4 text-lg bg-orange-100 border shadow-lg rounded-xl border-cyan-800 font-burtons text-cyan-800">
+                  DMS.
                 </button>
               </a>
             </div>
-                           <div className="basis-1/3 flex-1">
-              <a
-                href="https://vp-zeta.vercel.app/"
-              >
-                <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
+            <div className="flex-1 basis-1/3">
+              <a href="https://vp-zeta.vercel.app/">
+                <div className="transition-transform duration-300 transform rounded-lg shadow-xl hover:scale-105 keyb">
                   <Image
                     src={web11}
                     alt="web11"
-                    className="w-full h-full object-cover overflow-hidden rounded-lg"
+                    className="object-cover w-full h-full overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
                 </div>
-                <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
+                <button className="inline-block p-2 mt-4 text-lg bg-orange-100 border shadow-lg rounded-xl border-cyan-800 font-burtons text-cyan-800">
                   VP.
                 </button>
               </a>
             </div>
-                           <div className="basis-1/3 flex-1">
-              <a
-                href="chart-basic-app.vercel.app/"
-              >
-                <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
+            <div className="flex-1 basis-1/3">
+              <a href="chart-basic-app.vercel.app/">
+                <div className="transition-transform duration-300 transform rounded-lg shadow-xl hover:scale-105 keyb">
                   <Image
                     src={web12}
                     alt="web12"
-                    className="w-full h-full object-cover overflow-hidden rounded-lg"
+                    className="object-cover w-full h-full overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
                 </div>
-                <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
-                ChartApp
+                <button className="inline-block p-2 mt-4 text-lg bg-orange-100 border shadow-lg rounded-xl border-cyan-800 font-burtons text-cyan-800">
+                  ChartApp
                 </button>
               </a>
             </div>
 
-            <div className="basis-1/3 flex-1">
+            <div className="flex-1 basis-1/3">
               <a href="https://tic-tac-toe-flux.vercel.app/">
-                <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
+                <div className="transition-transform duration-300 transform rounded-lg shadow-xl hover:scale-105 keyb">
                   <Image
                     src={web4}
                     alt="web4"
-                    className="w-full h-full object-cover overflow-hidden rounded-lg"
+                    className="object-cover w-full h-full overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
                 </div>
-                <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
+                <button className="inline-block p-2 mt-4 text-lg bg-orange-100 border shadow-lg rounded-xl border-cyan-800 font-burtons text-cyan-800">
                   TicTacToe.
                 </button>
               </a>
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="flex-1 basis-1/3">
               <a href="https://vidhanvyrs.github.io/PackageMan/">
-                <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
+                <div className="transition-transform duration-300 transform rounded-lg shadow-xl hover:scale-105 keyb">
                   <Image
                     src={web5}
                     alt="web5"
-                    className="w-full h-full object-cover overflow-hidden rounded-lg"
+                    className="object-cover w-full h-full overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
                 </div>
-                <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
+                <button className="inline-block p-2 mt-4 text-lg bg-orange-100 border shadow-lg rounded-xl border-cyan-800 font-burtons text-cyan-800">
                   Package/DeliveryApp.
                 </button>
               </a>
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="flex-1 basis-1/3">
               <a href="https://vidhanvyrs.github.io/MonsterMarket/">
-                <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
+                <div className="transition-transform duration-300 transform rounded-lg shadow-xl hover:scale-105 keyb">
                   <Image
                     src={web6}
                     alt="web6"
-                    className="w-full h-full object-cover overflow-hidden rounded-lg"
+                    className="object-cover w-full h-full overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
                 </div>
-                <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
+                <button className="inline-block p-2 mt-4 text-lg bg-orange-100 border shadow-lg rounded-xl border-cyan-800 font-burtons text-cyan-800">
                   ShoppingApp.
                 </button>
               </a>
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="flex-1 basis-1/3">
               <a href="https://vidhanvyrs.github.io/OldNetflix/">
-                <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
+                <div className="transition-transform duration-300 transform rounded-lg shadow-xl hover:scale-105 keyb">
                   <Image
                     src={web7}
                     alt="web7"
-                    className="w-full h-full object-cover overflow-hidden rounded-lg"
+                    className="object-cover w-full h-full overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
                 </div>
-                <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
+                <button className="inline-block p-2 mt-4 text-lg bg-orange-100 border shadow-lg rounded-xl border-cyan-800 font-burtons text-cyan-800">
                   OldNetflix.
                 </button>
               </a>
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="flex-1 basis-1/3">
               <a href="https://vidhanvyrs.github.io/GymLandingPage/">
-                <div className="rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 keyb">
+                <div className="transition-transform duration-300 transform rounded-lg shadow-xl hover:scale-105 keyb">
                   <Image
                     src={web8}
                     alt="web8"
-                    className="w-full h-full object-cover overflow-hidden rounded-lg"
+                    className="object-cover w-full h-full overflow-hidden rounded-lg"
                     width={"100%"}
                     height={"100%"}
                   />
                 </div>
-                <button className="rounded-xl inline-block mt-4 text-lg p-2 border border-cyan-800 font-burtons text-cyan-800 bg-orange-100 shadow-lg">
+                <button className="inline-block p-2 mt-4 text-lg bg-orange-100 border shadow-lg rounded-xl border-cyan-800 font-burtons text-cyan-800">
                   GymLandingPage.
                 </button>
               </a>
