@@ -81,7 +81,7 @@ export default function Home() {
 
             <li>
               <a
-                href="https://drive.google.com/file/d/1Z7aiRUhChyFFOUJ7q1NpDkUBM2f28lTJ/view?usp=sharing"
+                href="https://drive.google.com/file/d/1tmmSdLLdgWU5rYipZmQwtcRqsPJ96DoP/view?usp=sharing"
                 target="_blank"
                 className="px-4 py-2 text-white duration-300 ease-in-out rounded-md cursor-pointer font-burtons bg-gradient-to-r from-cyan-500 to-teal-500 ml-7"
                 id="new2"
